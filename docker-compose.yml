@@ -1,0 +1,16 @@
+version: "3.5"
+
+services:
+
+ valheim:
+  image: lloesche/valheim-server
+  container_name: valheim
+  restart: always
+  ports:
+  - 2456-2458:2456-2458/udp
+  volumes:
+  - ./config:/config
+  environment:
+  - SERVER_NAME=yourservername
+  - WORLD_NAME=yourworldname
+  - SERVER_PASS=yourpassword
