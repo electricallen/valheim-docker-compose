@@ -11,6 +11,7 @@ services:
   volumes:
   - ./config:/config
   environment:
+  - TZ=America/Denver
   - SERVER_NAME=yourservername
   - WORLD_NAME=yourworldname
   - SERVER_PASS=yourpassword
